@@ -2,10 +2,11 @@ package com.example.demo.database
 
 data class TodoDatabase(
     var index: Int=0,
-    var todoLists: MutableList<Todo> = mutableListOf()
+    var todoList: MutableList<Todo> = mutableListOf()
 ) {
     fun init() {
-        this.todoLists = mutableListOf()
+        this.index = 0
+        this.todoList = mutableListOf()
         println("[DEBUG] TodoDatabase Initialized.")
     }
 }

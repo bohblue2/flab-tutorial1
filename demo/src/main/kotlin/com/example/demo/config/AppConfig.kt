@@ -7,8 +7,8 @@ import com.example.demo.database.TodoDatabase
 
 @Configuration
 class AppConfig {
-    @Bean(initMethod="init ")
-    fun todoDataBase(): TodoDatabase {
+    @Bean(initMethod="init")
+    fun todoDatabase(): TodoDatabase {
         return TodoDatabase()
     }
 }
