@@ -13,7 +13,7 @@ class TodoRepositoryImpl(
 
         // 1. index ? 
         return todo.index?.let { index ->
-            // index exists update
+            // if index exists then update
             findOne(index)?.apply {
                 this.title = todo.title
                 this.description = todo.description
@@ -22,6 +22,7 @@ class TodoRepositoryImpl(
             }
             
         }?: kotlin.run {
+            // if index does not exists then create new one
             return todo.apply {
                 this.index = ++todoDatabase.index
                 this.createdAt = LocalDateTime.now()
