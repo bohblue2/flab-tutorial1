@@ -9,5 +9,7 @@ sudo apt update
 curl -s https://get.sdkman.io/ | bash
 sdk install kotlin
 
+gradle test
+./gradlew dependencies
 ./gradlew build && ./gradlew buildRun
 ```
